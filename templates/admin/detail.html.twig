@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col">
+            <h1>details</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Naam: {{ telefoon.naam }}<br>
+            Merk: {{ telefoon.merk }}<br>
+            omschrijving: <br>{{ telefoon.description }}
+        </div>
+    </div>
+
+
+{% endblock %}

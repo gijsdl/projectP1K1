@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col">
+            <a href="{{ path('app_logout') }}">logout</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table table-responsive">
+                <thead>
+                <th>naam</th>
+                <th>show</th>
+                </thead>
+                <tbody>
+                {% for telefoon in telefoons %}
+                    <tr>
+                        <td>{{ telefoon.naam }}</td>
+                        <td><a href="{{ path('details', {'id' : telefoon.id}) }}">details</a> </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
